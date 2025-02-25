@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         ImageList1 = New ImageList(components)
         StatusStrip1 = New StatusStrip()
         ToolStripStatusLabel1 = New ToolStripStatusLabel()
@@ -72,8 +73,10 @@ Partial Class Form1
         ' ImageList1
         ' 
         ImageList1.ColorDepth = ColorDepth.Depth32Bit
-        ImageList1.ImageSize = New Size(16, 16)
+        ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), ImageListStreamer)
         ImageList1.TransparentColor = Color.Transparent
+        ImageList1.Images.SetKeyName(0, "drive.bmp")
+        ImageList1.Images.SetKeyName(1, "folder.bmp")
         ' 
         ' StatusStrip1
         ' 

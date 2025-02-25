@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("ImageViewer"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9234f5cb695f84dcc7d7a3e1fa07b4bdbd87c351"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fec2c2f189747d6d1fcfd47f3425020c6588effd"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("ImageViewer"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("ImageViewer"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

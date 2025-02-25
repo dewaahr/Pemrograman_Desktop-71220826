@@ -4,186 +4,172 @@ Imports gma.Drawing.ImageInfo
 Imports System.Net.Mime.MediaTypeNames
 
 Public Class Form1
-    ' Fungsi untuk memformat ukuran file dalam byte, Kb, Mb, atau Gb
     Private Function FormatFileSize(ByVal FileSizeBytes As Long) As String
         Dim sizeTypes() As String = {"b", "Kb", "Mb", "Gb"}
         Dim Len As Decimal = FileSizeBytes
         Dim sizeType As Integer = 0
-
         Do While Len > 1024
             Len = Decimal.Round(Len / 1024, 2)
             sizeType += 1
             If sizeType >= sizeTypes.Length - 1 Then Exit Do
         Loop
-
-        Return Len.ToString() & " " & sizeTypes(sizeType)
+        Dim Resp As String = Len.ToString & " " & sizeTypes(sizeType)
+        Return Resp
     End Function
-
-    ' Fungsi untuk mengambil semua file dalam folder
     Private Sub GetFiles(ByVal PathName As String)
         Dim LItem As ListViewItem
-
         lvImage.Items.Clear()
         lvImage.BeginUpdate()
-
         For Each nFile As String In Directory.GetFiles(PathName)
-            Dim sExtension As String = Path.GetExtension(nFile).ToLower()
+            Dim sExtension As String = Path.GetExtension(nFile)
+            sExtension = sExtension.ToLower
             Dim f As FileInfo = New FileInfo(nFile)
-
-            If {".bmp", ".jpg", ".jpeg", ".gif", ".png"}.Contains(sExtension) Then
+            Dim att As String = f.Attributes.ToString
+            Dim size As String = f.Length.ToString
+            Dim dibuat As String = f.CreationTime.ToString
+            Dim akses As String = f.LastAccessTime.ToString
+            Dim modi As String = f.LastWriteTime.ToString
+            If (Trim(sExtension) = ".bmp" Or Trim(sExtension) = ".jpg" Or Trim(sExtension) = ".jpeg" Or Trim(sExtension) = ".gif" Or Trim(sExtension) = ".png") = True Then
                 LItem = New ListViewItem()
                 Dim iconForFile As Icon = SystemIcons.WinLogo
 
-                If Not ImageList1.Images.ContainsKey(sExtension) Then
+                If Not (ImageList1.Images.ContainsKey(sExtension)) Then
                     iconForFile = System.Drawing.Icon.ExtractAssociatedIcon(nFile)
                     ImageList1.Images.Add(sExtension, iconForFile)
                 End If
-
                 With LItem
-                    .Text = Path.GetFileNameWithoutExtension(nFile)
-                    .SubItems.AddRange({sExtension, FormatFileSize(f.Length), f.LastWriteTime.ToString(), f.LastAccessTime.ToString(), f.CreationTime.ToString(), f.Attributes.ToString()})
+                    .SubItems(0).Text = Path.GetFileNameWithoutExtension(nFile)
+                    .SubItems.Add(sExtension)
+                    .SubItems.Add(FormatFileSize(size))
+                    .SubItems.Add(modi)
+                    .SubItems.Add(akses)
+                    .SubItems.Add(dibuat)
+                    .SubItems.Add(att)
                     .ImageKey = sExtension
                     .Tag = Path.Combine(PathName, nFile)
                 End With
-
                 lvImage.Items.Add(LItem)
             End If
         Next
-
         lvImage.EndUpdate()
         lvImage.Columns(0).Width = -2
     End Sub
-
-    ' Fungsi untuk mendapatkan folder dari direktori tertentu
     Private Sub GetFolders(ByVal PathName As TreeNode)
-        Dim di As DirectoryInfo = New DirectoryInfo(PathName.Tag)
+        Dim di As DirectoryInfo
         PathName.Nodes.Clear()
-
+        di = New DirectoryInfo(PathName.Tag)
         Try
             For Each nFolder In di.GetDirectories()
-                Dim tNode As New TreeNode() With {
-                    .ImageIndex = 1,
-                    .SelectedImageIndex = 1,
-                    .Tag = nFolder.FullName,
-                    .Text = nFolder.Name
-                }
-                tNode.Nodes.Add("")
-
-                If (New DirectoryInfo(tNode.Tag).Attributes And FileAttributes.Hidden) = False Then
+                Dim tNode As New TreeNode()
+                With tNode
+                    .ImageIndex = 1
+                    .SelectedImageIndex = 1
+                    .Tag = nFolder.FullName
+                    .Text = nFolder.Name.ToString()
+                    .Nodes.Add("")
+                End With
+                di = New DirectoryInfo(tNode.Tag)
+                If (di.Attributes And FileAttributes.Hidden) = False Then
                     PathName.Nodes.Add(tNode)
                 End If
             Next
         Catch ex As Exception
         End Try
     End Sub
-
-    ' Fungsi untuk mendapatkan semua drive yang tersedia
     Private Sub GetDrives()
-        For Each Drive In DriveInfo.GetDrives()
-            If Drive.IsReady Then
-                Dim dName As String = If(String.IsNullOrEmpty(Drive.VolumeLabel), Drive.Name, Drive.VolumeLabel)
-                Dim tNode As New TreeNode() With {
-                    .ImageIndex = 0,
-                    .SelectedImageIndex = 0,
-                    .Text = dName,
+        For Each Drive In DriveInfo.GetDrives
+            If (Drive.IsReady) Then
+                Dim dName As String = Drive.VolumeLabel
+                If String.IsNullOrEmpty(dName) Then
+                    dName = Drive.Name
+                End If
+                Dim tNode As New TreeNode()
+                With tNode
+                    .ImageIndex = 0
+                    .SelectedImageIndex = 0
+                    .Text = dName
+                    .Nodes.Add("")
                     .Tag = Drive.Name
-                }
-                tNode.Nodes.Add("")
-                tvDrive.Nodes.Add(tNode)
+                End With
+                Call tvDrive.Nodes.Add(tNode)
             End If
         Next
     End Sub
-
-    ' Fungsi untuk mendapatkan format gambar
-    Private Function GetRaw(ByVal imgf As ImageFormat) As String
-        Select Case True
-            Case imgf.Equals(ImageFormat.Bmp)
-                Return "Bitmap"
-            Case imgf.Equals(ImageFormat.Jpeg)
-                Return "Jpeg"
-            Case imgf.Equals(ImageFormat.Png)
-                Return "PNG"
-            Case imgf.Equals(ImageFormat.Tiff)
-                Return "TIFF"
-            Case imgf.Equals(ImageFormat.Gif)
-                Return "GIF"
-            Case imgf.Equals(ImageFormat.Icon)
-                Return "ICON"
-            Case Else
-                Return "Unknown"
-        End Select
+    Function GetRaw(ByVal imgf As ImageFormat)
+        If imgf.Equals(ImageFormat.Bmp) Then
+            Return "Bitmap"
+        ElseIf imgf.Equals(ImageFormat.Jpeg) Then
+            Return "Jpeg"
+        ElseIf imgf.Equals(ImageFormat.Png) Then
+            Return ("PNG")
+        ElseIf imgf.Equals(ImageFormat.Tiff) Then
+            Return "TIFF"
+        ElseIf imgf.Equals(ImageFormat.Gif) Then
+            Return "GIF"
+        ElseIf imgf.Equals(ImageFormat.Icon) Then
+            Return "ICON"
+        End If
+        Return "Unknown"
     End Function
 
-    ' Event saat form pertama kali dibuat
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load()
         GetDrives()
         lvImage.Columns(0).Width = -2
-        SplitContainerBawah2.Panel2.VerticalScroll.Visible = True
-        SplitContainerBawah2.Panel2.HorizontalScroll.Visible = True
+        SplitContainer3.Panel2.VerticalScroll.Visible = True
+        SplitContainer3.Panel2.HorizontalScroll.Visible = True
     End Sub
 
-    ' Event saat tree view dikembangkan
-    Private Sub tvDrive_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles tvDrive.BeforeExpand
+    Private Sub tvDrive_BeforeExpand(sender As System.Object, e As System.Windows.Forms.TreeViewCancelEventArgs) Handles tvDrive.BeforeExpand
         GetFolders(e.Node)
     End Sub
-
-    ' Event setelah folder dipilih pada tree view
-    Private Sub tvDrive_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvDrive.AfterSelect
-        GetFiles(e.Node.Tag)
-    End Sub
-
-    ' Event saat gambar dipilih di list view
-    Private Sub lvImage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvImage.SelectedIndexChanged
+    Private Sub lvImage_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles lvImage.SelectedIndexChanged
         Dim _exif As Info
         lvExif.Items.Clear()
-
         If lvImage.SelectedItems.Count > 0 Then
-            PictureBox1.Image = Bitmap.FromFile(lvImage.SelectedItems(0).Tag.ToString())
-            ToolStripStatusReady.Text = lvImage.SelectedItems(0).Tag.ToString()
-            ToolStripStatusDimension.Text = $"Dimension: {PictureBox1.Image.Size.Width} px X {PictureBox1.Image.Size.Height} px"
-            ToolStripStatusBits.Text = $"Depth: {PictureBox1.Image.PixelFormat}"
-            ToolStripStatusResolution.Text = $"Resolution: {PictureBox1.Image.HorizontalResolution} dpi X {PictureBox1.Image.VerticalResolution} dpi"
-            ToolStripStatusRawFormat.Text = $"Compression: {GetRaw(PictureBox1.Image.RawFormat)}"
-
-            _exif = New Info(lvImage.SelectedItems(0).Tag.ToString())
+            PictureBox1.Image = Bitmap.FromFile(lvImage.SelectedItems(0).Tag.ToString)
+            ToolStripStatusLabel1.Text = lvImage.SelectedItems(0).Tag.ToString
+            ToolStripStatusLabel2.Text = "Dimension: " &
+           PictureBox1.Image.Size.Width.ToString & " px X " &
+           PictureBox1.Image.Size.Height.ToString & " px"
+            ToolStripStatusLabel3.Text = "Depth: " &
+           PictureBox1.Image.PixelFormat.ToString
+            ToolStripStatusLabel4.Text = "Resolution: " &
+           PictureBox1.Image.HorizontalResolution.ToString & " dpi X " &
+           PictureBox1.Image.VerticalResolution.ToString & " dpi"
+            ToolStripStatusLabel5.Text = "Compression: " &
+           GetRaw(PictureBox1.Image.RawFormat)
+            _exif = New Info(lvImage.SelectedItems(0).Tag.ToString)
             PropertyGrid1.SelectedObject = _exif
-
             For Each propertyName As String In _exif.PropertyItems.Keys
                 Try
-                    Dim LItem As New ListViewItem() With {
-                        .Text = propertyName
-                    }
-                    LItem.SubItems.Add(_exif.PropertyItems(propertyName).ToString())
+                    Dim LItem As ListViewItem = New ListViewItem()
+                    LItem.SubItems(0).Text = propertyName
+                    LItem.SubItems.Add(_exif.PropertyItems(propertyName).ToString)
                     lvExif.Items.Add(LItem)
-                Catch ex As Exception
+                Catch eks As Exception
                 End Try
             Next
         End If
-
         lvImage.Columns(0).Width = -2
         lvExif.Columns(0).Width = -2
     End Sub
-
-    ' Event untuk membuka file dengan program default
-    Private Sub lvImage_DoubleClick(sender As Object, e As EventArgs) Handles lvImage.DoubleClick
-        Process.Start(lvImage.SelectedItems(0).Tag.ToString())
+    Private Sub lvImage_DoubleClick(sender As System.Object, e As System.EventArgs) Handles lvImage.DoubleClick
+        Process.Start(lvImage.SelectedItems(0).Tag)
     End Sub
 
-    ' Event untuk menampilkan gambar dalam ukuran asli
-    Private Sub PictureBox1_DoubleClick(sender As Object, e As EventArgs) Handles PictureBox1.DoubleClick
-        Dim pb As New PictureBox With {
-            .Image = Image.FromFile(ToolStripStatusReady.Text),
-            .SizeMode = PictureBoxSizeMode.AutoSize
-        }
-        Dim pnl As New Panel With {
-            .AutoScroll = True,
-            .Dock = DockStyle.Fill
-        }
+    Private Sub PictureBox1_DoubleClick(sender As System.Object, e As System.EventArgs) Handles PictureBox1.DoubleClick
+        Dim pb As PictureBox = New PictureBox
+        pb.Image = Image.(ToolStripStatusLabel1.Text)
+        pb.SizeMode = PictureBoxSizeMode.AutoSize
+        Dim pnl As Panel = New Panel
+        pnl.AutoScroll = True
+        pnl.Dock = DockStyle.Fill
         pnl.Controls.Add(pb)
-        Dim f As New Form With {
-            .WindowState = FormWindowState.Maximized
-        }
+        Dim f As Form = New Form
+        f.WindowState = FormWindowState.Maximized
         f.Controls.Add(pnl)
         f.Show()
     End Sub
+
 End Class

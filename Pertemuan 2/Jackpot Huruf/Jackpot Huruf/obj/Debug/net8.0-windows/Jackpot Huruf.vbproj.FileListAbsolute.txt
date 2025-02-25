@@ -1,0 +1,17 @@
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\bin\Debug\net8.0-windows\Jackpot Huruf.exe
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\bin\Debug\net8.0-windows\Jackpot Huruf.deps.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\bin\Debug\net8.0-windows\Jackpot Huruf.runtimeconfig.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\bin\Debug\net8.0-windows\Jackpot Huruf.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\bin\Debug\net8.0-windows\Jackpot Huruf.pdb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot_Huruf.Form1.resources
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.vbproj.GenerateResource.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.AssemblyInfoInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.AssemblyInfo.vb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.vbproj.CoreCompileInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.sourcelink.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\refint\Jackpot Huruf.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.pdb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\Jackpot Huruf.genruntimeconfig.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Jackpot Huruf\Jackpot Huruf\obj\Debug\net8.0-windows\ref\Jackpot Huruf.dll

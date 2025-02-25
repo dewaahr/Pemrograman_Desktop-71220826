@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pemrograman_Desktop-71220826\\Pertemuan 4\\ImageViewer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E4C12B-8CDB-41B7-97ED-3A2B8490790F}|ImageViewer\\ImageViewer.vbproj|d:\\pemrograman_desktop-71220826\\pertemuan 4\\imageviewer\\imageviewer\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C4E4C12B-8CDB-41B7-97ED-3A2B8490790F}|ImageViewer\\ImageViewer.vbproj|solutionrelative:imageviewer\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 197,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\Pemrograman_Desktop-71220826\\Pertemuan 4\\ImageViewer\\ImageViewer\\Form1.vb",
+              "RelativeDocumentMoniker": "ImageViewer\\Form1.vb",
+              "ToolTip": "D:\\Pemrograman_Desktop-71220826\\Pertemuan 4\\ImageViewer\\ImageViewer\\Form1.vb [Design]",
+              "RelativeToolTip": "ImageViewer\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-02-25T15:30:52.926Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

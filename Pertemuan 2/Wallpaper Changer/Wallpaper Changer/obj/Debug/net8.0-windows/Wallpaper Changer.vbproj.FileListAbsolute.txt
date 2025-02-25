@@ -1,0 +1,17 @@
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\bin\Debug\net8.0-windows\Wallpaper Changer.exe
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\bin\Debug\net8.0-windows\Wallpaper Changer.deps.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\bin\Debug\net8.0-windows\Wallpaper Changer.runtimeconfig.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\bin\Debug\net8.0-windows\Wallpaper Changer.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\bin\Debug\net8.0-windows\Wallpaper Changer.pdb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper_Changer.Form1.resources
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.vbproj.GenerateResource.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.AssemblyInfoInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.AssemblyInfo.vb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.vbproj.CoreCompileInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.sourcelink.json
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\refint\Wallpaper Changer.dll
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.pdb
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\Wallpaper Changer.genruntimeconfig.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 2\Wallpaper Changer\Wallpaper Changer\obj\Debug\net8.0-windows\ref\Wallpaper Changer.dll

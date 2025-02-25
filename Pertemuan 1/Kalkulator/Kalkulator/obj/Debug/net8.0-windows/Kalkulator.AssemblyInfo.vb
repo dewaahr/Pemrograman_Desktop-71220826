@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Kalkulator"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0a82706502bc15b996169b30b80414fcf1258d0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9234f5cb695f84dcc7d7a3e1fa07b4bdbd87c351"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Kalkulator"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Kalkulator"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

@@ -1,0 +1,8 @@
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.vbproj.AssemblyReference.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.Form1.resources
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.vbproj.GenerateResource.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.AssemblyInfoInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.AssemblyInfo.vb
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.vbproj.CoreCompileInputs.cache
+D:\Pemrograman_Desktop-71220826\Pertemuan 4\ImageViewer\ImageViewer\obj\Debug\net8.0-windows\ImageViewer.sourcelink.json

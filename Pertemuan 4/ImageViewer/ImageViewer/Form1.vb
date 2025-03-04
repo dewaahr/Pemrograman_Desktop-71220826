@@ -114,7 +114,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load()
-        GetDrives()
+GetDrives()
         lvImage.Columns(0).Width = -2
         SplitContainer3.Panel2.VerticalScroll.Visible = True
         SplitContainer3.Panel2.HorizontalScroll.Visible = True
